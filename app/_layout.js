@@ -33,7 +33,7 @@ function AuthScreen() {
       >
         <Ionicons name={isBiometricSupported ? "finger-print" : "lock-closed"} size={24} color="#fff" />
         <Text style={styles.authButtonText}>
-          {isBiometricSupported ? "Authenticate to Continue" : "Enter with Passcode"}
+
         </Text>
       </TouchableOpacity>
     </View>
@@ -164,7 +164,7 @@ function RootLayout() {
     );
   }
 
-  return isAuthenticated ? <ThemedStack /> : <AuthScreen />;
+  return <ThemedStack />;
 }
 
 // Export default Layout

@@ -38,7 +38,7 @@ const Book = () => {
       const data = await response.json();
       console.log("Books fetched successfully");
       
-      // แปลงข้อมูลให้ตรงกับ structure เดิม
+
       const formattedBooks = data.items.map(item => ({
         _id: item.id,
         title: item.volumeInfo.title || 'No Title',
@@ -52,7 +52,7 @@ const Book = () => {
       console.error("Error fetching book data:", error);
       setError("Could not load books. Please try again later.");
       
-      // ใช้ mock data เมื่อ API ล้มเหลว
+
       setBooks([
         {
           _id: '1',
